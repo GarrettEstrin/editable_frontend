@@ -1,0 +1,880 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+h1, h2 {
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  background-color: #000; }
+
+a {
+  background: transparent;
+  text-decoration: none; }
+  a .yellow_button {
+    color: #000; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+img {
+  border: 0; }
+
+.header .phone_num img,
+.steps .container .black_bar .orange_button .number img {
+  display: none !important; }
+
+.header .phone_container .phone_num a,
+.top_section .container .black_bar .orange_button .phone_logo a,
+.steps .container .black_bar_steps .orange_button .number a {
+  color: #fff; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal;
+  color: #000;
+  text-indent: 5px; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+a {
+  color: #0066ff; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+.clear {
+  clear: both;
+  width: 100%;
+  height: 0px; }
+
+h1, h2, h3, h4, li, ul, p, div, span {
+  max-height: 999999px;
+  font-weight: normal;
+  margin: 0; }
+
+/* Page starts here */
+body {
+  min-width: 320px;
+  background: #ffffff; }
+
+.rel {
+  position: relative; }
+
+.abs {
+  position: absolute; }
+
+.fixed {
+  position: fixed; }
+
+.container {
+  max-width: 970px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  color: #000;
+  font-family: 'Open Sans', sans-serif; }
+
+.block {
+  clear: both; }
+
+.tac {
+  text-align: center; }
+
+.tal {
+  text-align: left; }
+
+.tar {
+  text-align: right; }
+
+.float_left,
+.left {
+  float: left; }
+
+.float_right,
+.right {
+  float: right; }
+
+.block {
+  float: none;
+  clear: both; }
+
+sup {
+  font-size: 7px;
+  font-weight: 700;
+  color: #9F9F9F; }
+
+.hide-desktop, .mobfab {
+  display: none; }
+
+.dp_phone_container_closed {
+  display: none !important; }
+
+.ie8 .top_section.nintyStyle .container .toplegal .legal_text {
+  top: 10px; }
+
+/*
+IEΓëÑ9 prioritizes valid font formats over invalid ones. Therefore, while embedded-opentype is the correct format for an .eot font, eot is used to fool modern IE into prioritizing other, newer font formats.
+
+IEΓëñ8 only supports .eot fonts and parses the src property incorrectly, interpreting everything between the first opening parenthesis ( and the last closing parenthesis ) as a single URL. Therefore, a ? is appended to the .eotΓÇÖs URL, fooling older IE into reading all other sources as query parameters.
+
+
+Create a font face rule that applies to 500 weight text and sources EOT, WOFF2, and WOFF.
+
+@include font-face(fontname, fonts/fontname, 500, normal, eot woff2 woff);
+Rendered as CSS:
+
+@font-face {
+    font-family: "fontname";
+    font-style: normal;
+    font-weight: 500;
+    src: url("fonts/fontname.eot?") format("eot"),
+         url("fonts/fontname.woff2") format("woff2"),
+         url("fonts/fontname.woff") format("woff");
+}
+*/
+
+.container {
+  font-family: "SprintSans-Regular", 'Open Sans', sans-serif; }
+
+.bolder {
+  font-family: "SprintSans-Bold", 'Open Sans', sans-serif;
+  font-weight: 800; }
+
+.header {
+  height: 85px;
+  width: 100%;
+  background: #fff; }
+  .header .logo {
+    margin: 5px 0; }
+  .header .signinlink {
+    display: block;
+    margin: 35px 20px 0; }
+    .header .signinlink .signin {
+      color: #000;
+      font-size: 12px; }
+  .header .yellowcallbutton {
+    margin: 10px 0 0; }
+    .header .yellowcallbutton .call {
+      font-size: 13px;
+      display: block;
+      text-align: center;
+      padding: 14px 0 0; }
+    .header .yellowcallbutton .blackphone {
+      margin: 0 3px 0 15px; }
+    .header .yellowcallbutton .phonenum a {
+      font-size: 26px;
+      line-height: 25px;
+      color: #000; }
+    .header .yellowcallbutton .shoponline {
+      display: block;
+      text-align: center;
+      color: #000;
+      font-size: 30px;
+      padding: 15px 0 0; }
+
+.purple_bar {
+  background: #7d4eff; }
+  .purple_bar .container {
+    position: relative; }
+    .purple_bar .container .purpletag {
+      position: absolute;
+      left: 60px;
+      top: -9px;
+      z-index: 4; }
+    .purple_bar .container .tagtext {
+      margin: 0 auto; }
+
+.tabletonly, .mobileonly, .mobonly {
+  display: none !important; }
+
+.middlesection {
+  background: url(images/newbg.png) no-repeat;
+  background-size: cover; }
+  .middlesection .container.yellowarrowsection {
+    background: url(images/yellowback-new.png) no-repeat #e3e3e3;
+    height: 580px; }
+    .middlesection .container.yellowarrowsection .phoneholder img {
+      max-width: 223px;
+      margin-top: 50px;
+      display: block;
+      position: relative;
+      z-index: 100; }
+    .middlesection .container.yellowarrowsection .writing {
+      width: 530px;
+      margin: 0 0 0 20px;
+      position: relative; }
+      .middlesection .container.yellowarrowsection .writing .rightbubble {
+        position: absolute;
+        top: 10px;
+        right: -170px; }
+      .middlesection .container.yellowarrowsection .writing .positionpurpleholder {
+        position: absolute;
+        right: -200px;
+        top: 240px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder a {
+          display: block;
+          margin: 0 0 0 81px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder .purplephonebar a.anumber {
+          font-size: 43px;
+          color: #fff;
+          padding: 30px 0 0; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder .orshoponline {
+          color: #000;
+          text-decoration: underline;
+          padding: 5px 0;
+          display: block;
+          font-size: 20px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder .shoponline.bolder {
+          padding: 26px 0 0;
+          display: block;
+          font-size: 45px;
+          text-align: center;
+          color: #fff; }
+      .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new {
+        position: absolute;
+        right: -200px;
+        top: 260px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new a {
+          display: block;
+          margin: 0 0 0 81px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new .purplephonebar a.anumber {
+          font-size: 43px;
+          color: #fff;
+          padding: 30px 0 0; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new .orshoponline {
+          color: #000;
+          text-decoration: underline;
+          padding: 5px 0;
+          display: block;
+          font-size: 20px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new .shoponline.bolder {
+          padding: 26px 0 0;
+          display: block;
+          font-size: 45px;
+          text-align: center;
+          color: #fff; }
+      .middlesection .container.yellowarrowsection .writing .blackbarwriting {
+        color: #fff;
+        font-size: 25px;
+        margin: 53px 0 30px;
+        position: relative; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting span {
+          display: block; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting .unl {
+          font-size: 35px;
+          line-height: 37px; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting .skinny {
+          font-size: 20px;
+          font-family: "SprintSans-Regular", 'Open Sans', sans-serif; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting .blackdownarrow {
+          position: absolute;
+          right: 0;
+          bottom: -70px; }
+      .middlesection .container.yellowarrowsection .writing .blackbarwriting.new {
+        color: #fff;
+        font-size: 20px;
+        margin: 45px 0 20px;
+        position: relative; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting.new span {
+          display: block;
+          line-height: 28px; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting.new .unl {
+          font-size: 45px;
+          line-height: 50px; }
+          .middlesection .container.yellowarrowsection .writing .blackbarwriting.new .unl .small {
+            font-size: 20px;
+            font-weight: 700;
+            display: inline-block; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting.new .thirty {
+          font-size: 30px;
+          font-weight: 800;
+          display: inline-block; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting.new .skinny {
+          font-size: 20px;
+          font-family: "SprintSans-Regular", 'Open Sans', sans-serif; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting.new .blackdownarrow {
+          position: absolute;
+          right: -30px;
+          bottom: -65px; }
+      .middlesection .container.yellowarrowsection .writing .legal {
+        display: block;
+        font-size: 10px;
+        clear: both;
+        margin: 0 0 10px; }
+      .middlesection .container.yellowarrowsection .writing .callorclick {
+        font-size: 32px;
+        margin: 0 0 0 10px; }
+      .middlesection .container.yellowarrowsection .writing .blackshape .hdtext {
+        color: #fff;
+        font-size: 16px;
+        font-style: italic;
+        display: block;
+        padding: 0 0 0 10px; }
+      .middlesection .container.yellowarrowsection .writing .blackshape.new {
+        margin: 10px 0 0; }
+        .middlesection .container.yellowarrowsection .writing .blackshape.new .hdtext {
+          color: #fff;
+          font-size: 16px;
+          font-style: italic;
+          display: block;
+          padding: 0 0 0 10px; }
+      .middlesection .container.yellowarrowsection .writing .orangeoutline {
+        margin: 0 0 0 -25px; }
+        .middlesection .container.yellowarrowsection .writing .orangeoutline .innercontent {
+          padding: 20px 0 0 35px; }
+          .middlesection .container.yellowarrowsection .writing .orangeoutline .innercontent .hereshow {
+            font-size: 16px;
+            padding: 0 0 8px;
+            display: block; }
+          .middlesection .container.yellowarrowsection .writing .orangeoutline .innercontent ol {
+            margin: 0 0 1.5em;
+            padding: 0;
+            counter-reset: item; }
+          .middlesection .container.yellowarrowsection .writing .orangeoutline .innercontent ol > li {
+            margin: 0;
+            padding: 0 0 4px 2em;
+            font-size: 14px;
+            text-indent: -2em;
+            list-style-type: none;
+            counter-increment: item; }
+          .middlesection .container.yellowarrowsection .writing .orangeoutline .innercontent ol > li:before {
+            display: inline-block;
+            width: 1em;
+            padding-right: 0.5em;
+            font-weight: 800;
+            text-align: right;
+            content: counter(item) "."; }
+    .middlesection .container.yellowarrowsection .bottomlegal {
+      clear: both;
+      max-width: 730px;
+      padding: 10px 0 0; }
+      .middlesection .container.yellowarrowsection .bottomlegal .legaltext {
+        font-size: 10px; }
+
+.ie8 .middlesection {
+  background: none; }
+
+.whitepanel {
+  background: #fff;
+  padding: 30px 0; }
+  .whitepanel .grayleftbox.offhours {
+    padding: 30px 0; }
+  .whitepanel .grayleftbox {
+    width: 495px;
+    background: #ececec;
+    padding: 10px 0; }
+    .whitepanel .grayleftbox .calltoorder {
+      display: block;
+      text-align: center;
+      font-size: 30px; }
+    .whitepanel .grayleftbox .bottomyellowblock {
+      margin: 0 auto;
+      display: block; }
+      .whitepanel .grayleftbox .bottomyellowblock .bbphone {
+        margin: 31px 0 0 20px; }
+      .whitepanel .grayleftbox .bottomyellowblock .phonenum a {
+        font-size: 40px;
+        padding: 24px 0 0 8px;
+        display: block;
+        color: #000; }
+      .whitepanel .grayleftbox .bottomyellowblock .shoponline {
+        font-size: 35px;
+        display: block;
+        text-align: center;
+        color: #000;
+        padding: 27px 0 0; }
+
+.bottomgray {
+  background: #ececec;
+  padding: 30px 0; }
+  .bottomgray .bottomlegal {
+    font-size: 10px;
+    padding: 10px 0; }
+  .bottomgray .footer-nav a {
+    color: #000;
+    font-size: 10px;
+    padding: 15px; }
+
+@media (max-width: 970px) {
+  .desktoponly, .mobileonly {
+    display: none !important; }
+
+  .tabletonly {
+    display: block !important; }
+
+  .container {
+    width: 700px !important;
+    position: relative; }
+
+  .purple_bar.tabletonly {
+    height: 35px; }
+    .purple_bar.tabletonly .tabpurpletag {
+      position: absolute;
+      top: -2px;
+      left: 3px;
+      z-index: 10; }
+    .purple_bar.tabletonly .tabtagtext {
+      margin: 0 auto; }
+
+  .middlesection .container.yellowarrowsection.new {
+    height: 520px; }
+  .middlesection .container.yellowarrowsection {
+    background-position: -224px 0; }
+    .middlesection .container.yellowarrowsection .phoneholder img {
+      max-width: 133px;
+      margin-top: 200px;
+      display: block; }
+    .middlesection .container.yellowarrowsection .writing {
+      margin: 0px 0 0 -130px; }
+      .middlesection .container.yellowarrowsection .writing .rightbubble {
+        right: -190px; }
+      .middlesection .container.yellowarrowsection .writing .blackbarwriting {
+        margin: 53px 0 30px 10px; }
+      .middlesection .container.yellowarrowsection .writing .blackbarwriting.new {
+        margin: 53px 0 13px 15px; }
+        .middlesection .container.yellowarrowsection .writing .blackbarwriting.new .blackdownarrow {
+          right: -90px; }
+      .middlesection .container.yellowarrowsection .writing .belowbar {
+        width: 380px;
+        margin: 0 0 0 129px; }
+        .middlesection .container.yellowarrowsection .writing .belowbar .orangeoutline {
+          background: none; }
+        .middlesection .container.yellowarrowsection .writing .belowbar .orangeoutline.new {
+          height: 115px; }
+          .middlesection .container.yellowarrowsection .writing .belowbar .orangeoutline.new .innercontent {
+            padding: 5px 0 0 35px; }
+            .middlesection .container.yellowarrowsection .writing .belowbar .orangeoutline.new .innercontent li {
+              font-size: 12px; }
+        .middlesection .container.yellowarrowsection .writing .belowbar .blackshape.new {
+          margin: -2px 0 0 -10px;
+          padding: 2px 0 0 23px; }
+        .middlesection .container.yellowarrowsection .writing .belowbar .callorclick.new {
+          font-size: 26px; }
+      .middlesection .container.yellowarrowsection .writing .legal {
+        font-size: 9px;
+        clear: both;
+        margin: 0 0 2px 10px;
+        width: 440px; }
+      .middlesection .container.yellowarrowsection .writing .positionpurpleholder {
+        position: absolute;
+        right: -200px;
+        top: 250px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder a {
+          display: block;
+          margin: 0 0 0 60px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder .tabpurplephonebar a.anumber {
+          font-size: 30px;
+          color: #fff;
+          padding: 20px 0 0; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder .orshoponline {
+          color: #000;
+          text-decoration: underline;
+          padding: 2px 0;
+          display: block;
+          font-size: 14px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder .shoponline.bolder {
+          padding: 17px 0 0;
+          display: block;
+          font-size: 34px;
+          text-align: center;
+          color: #fff; }
+      .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new {
+        position: absolute;
+        right: -200px;
+        top: 260px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new a {
+          display: block;
+          margin: 0 0 0 60px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new .tabpurplephonebar a.anumber {
+          font-size: 30px;
+          color: #fff;
+          padding: 20px 0 0; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new .orshoponline {
+          color: #000;
+          text-decoration: underline;
+          padding: 2px 0;
+          display: block;
+          font-size: 14px; }
+        .middlesection .container.yellowarrowsection .writing .positionpurpleholder.new .shoponline.bolder {
+          padding: 17px 0 0;
+          display: block;
+          font-size: 34px;
+          text-align: center;
+          color: #fff; }
+    .middlesection .container.yellowarrowsection .bottomlegal {
+      max-width: 500px; }
+
+  .whitepanel .grayleftbox {
+    width: 370px; }
+    .whitepanel .grayleftbox .calltoorder {
+      font-size: 18px; }
+  .whitepanel .grayleftbox.offhours {
+    padding: 10px 0; }
+  .whitepanel .bestpricearrow {
+    width: 320px; }
+  .whitepanel .bestpricearrow.onhours {
+    margin: 10px 0; } }
+@media (max-width: 700px) {
+  .notShownOnMobile, .tabletonly, .desktoponly {
+    display: none !important; }
+
+  .container {
+    width: 310px !important;
+    position: relative; }
+
+  .mobileonly, .mobonly {
+    display: block !important; }
+
+  .right a.signinlink {
+    clear: both;
+    text-align: center;
+    margin: 4px 0 0;
+    width: 247px; }
+
+  .yellowcallbutton {
+    clear: both; }
+
+  .toppurplebar {
+    background: #5c2ce0;
+    padding: 5px 0; }
+    .toppurplebar .mobtoppurpline {
+      margin: 0 auto; }
+
+  .lightpurple {
+    background: #7d4eff;
+    padding: 4px 0; }
+    .lightpurple .tinytag {
+      margin: 0 10px 0 15px; }
+    .lightpurple .whenyoutext {
+      color: #fff;
+      font-size: 15px; }
+
+  .black.new {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 18px; }
+    .black.new span {
+      display: block;
+      text-align: center;
+      font-weight: 800; }
+      .black.new span .thirty {
+        font-weight: 800;
+        font-size: 22px;
+        display: inline-block; }
+    .black.new .unl {
+      font-size: 27px; }
+      .black.new .unl .small {
+        font-size: 13px;
+        font-weight: 700;
+        display: inline-block; }
+    .black.new .skinny {
+      padding: 3px 0;
+      font-weight: 300;
+      font-size: 15px; }
+
+  .black {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 16px; }
+    .black span {
+      display: block;
+      text-align: center;
+      color: #fff; }
+    .black .unl {
+      font-size: 21px; }
+    .black .skinny {
+      padding: 3px 0; }
+
+  .yellow {
+    background: #ffc600;
+    padding: 10px 0; }
+    .yellow .tabpurplephonebar, .yellow .tabpurplebar {
+      margin: 0 auto; }
+      .yellow .tabpurplephonebar .anumber, .yellow .tabpurplebar .anumber {
+        color: #fff;
+        font-size: 30px;
+        padding: 20px 0 0 60px;
+        display: block; }
+      .yellow .tabpurplephonebar .shoponline, .yellow .tabpurplebar .shoponline {
+        color: #fff;
+        text-align: center;
+        display: block;
+        font-size: 30px;
+        padding: 18px 0 0; }
+    .yellow .orshoponline {
+      text-align: center;
+      display: block;
+      color: #000;
+      text-decoration: underline;
+      font-size: 16px; }
+    .yellow .legal {
+      display: block;
+      font-size: 10px;
+      padding: 10px 0; }
+    .yellow .phoneandtext {
+      height: 180px;
+      margin: 10px 0 0; }
+      .yellow .phoneandtext .leftmobphoneholder img {
+        max-width: 99px;
+        position: absolute; }
+      .yellow .phoneandtext .leftmobtext {
+        position: relative;
+        background: url("images/orangeoutline.png") no-repeat;
+        background-size: cover;
+        padding: 10px 0;
+        margin: 15px 0 0 99px;
+        width: 195px; }
+        .yellow .phoneandtext .leftmobtext .uparrow {
+          position: absolute;
+          right: -10px;
+          top: -40px; }
+        .yellow .phoneandtext .leftmobtext span {
+          display: block;
+          margin: 0 0 0 20px;
+          font-size: 25px; }
+        .yellow .phoneandtext .leftmobtext .shoponline {
+          position: absolute;
+          bottom: -45px;
+          color: #000;
+          text-decoration: underline; }
+
+  .darkyellow {
+    background: #f8b700;
+    padding: 10px 0; }
+    .darkyellow .hereshow {
+      font-size: 16px;
+      padding: 0 0 8px;
+      display: block; }
+    .darkyellow ol {
+      margin: 0 0 5px;
+      padding: 0;
+      counter-reset: item; }
+    .darkyellow ol > li {
+      margin: 0;
+      padding: 0 0 4px 2em;
+      font-size: 14px;
+      text-indent: -2em;
+      list-style-type: none;
+      counter-increment: item; }
+    .darkyellow ol > li:before {
+      display: inline-block;
+      width: 1em;
+      padding-right: 0.5em;
+      font-weight: 800;
+      text-align: right;
+      content: counter(item) "."; }
+    .darkyellow .hd {
+      font-size: 13px;
+      padding: 0 20px;
+      font-family: "SprintSans-BoldItalic";
+      font-weight: 700;
+      display: block; }
+    .darkyellow .thebest {
+      font-size: 22px;
+      text-align: center;
+      display: block;
+      padding: 10px 0 0; }
+
+  .bottomgray .footer-nav a {
+    color: #000;
+    font-size: 10px;
+    padding: 7px; } }
+.bbphone {
+  background-image: url(images/sprite.png);
+  background-position: -776px -170px;
+  width: 36px;
+  height: 36px; }
+
+.blackdownarrow {
+  background-image: url(images/sprite.png);
+  background-position: 0px -468px;
+  width: 64px;
+  height: 77px; }
+
+.blackphone {
+  background-image: url(images/sprite.png);
+  background-position: -766px -210px;
+  width: 22px;
+  height: 22px; }
+
+.blackshape {
+  background-image: url(images/sprite.png);
+  background-position: -456px -311px;
+  width: 301px;
+  height: 40px; }
+
+.bottomyellowblock {
+  background-image: url(images/sprite.png);
+  background-position: -456px 0px;
+  width: 368px;
+  height: 97px; }
+
+.mobtoppurpline {
+  background-image: url(images/sprite.png);
+  background-position: 0px -446px;
+  width: 296px;
+  height: 22px; }
+
+.new-logo {
+  background-image: url(images/sprite.png);
+  background-position: -64px -468px;
+  width: 54px;
+  height: 77px; }
+
+.orangeoutline {
+  background-image: url(images/sprite.png);
+  background-position: 0px 0px;
+  width: 456px;
+  height: 158px; }
+
+.purplebar {
+  background-image: url(images/sprite.png);
+  background-position: 0px -264px;
+  width: 404px;
+  height: 106px; }
+
+.purplephonebar {
+  background-image: url(images/sprite.png);
+  background-position: 0px -158px;
+  width: 404px;
+  height: 106px; }
+
+.purpletag {
+  background-image: url(images/sprite.png);
+  background-position: -736px -97px;
+  width: 53px;
+  height: 53px; }
+
+.tabpurplebar {
+  background-image: url(images/sprite.png);
+  background-position: -456px -170px;
+  width: 280px;
+  height: 73px; }
+
+.tabpurplephonebar {
+  background-image: url(images/sprite.png);
+  background-position: -456px -97px;
+  width: 280px;
+  height: 73px; }
+
+.tabpurpletag {
+  background-image: url(images/sprite.png);
+  background-position: -736px -170px;
+  width: 40px;
+  height: 40px; }
+
+.tabtagtext {
+  background-image: url(images/sprite.png);
+  background-position: 0px -411px;
+  width: 600px;
+  height: 35px; }
+
+.tagtext {
+  background-image: url(images/sprite.png);
+  background-position: 0px -370px;
+  width: 698px;
+  height: 41px; }
+
+.tinytag {
+  background-image: url(images/sprite.png);
+  background-position: -736px -210px;
+  width: 30px;
+  height: 25px; }
+
+.uparrow {
+  background-image: url(images/sprite.png);
+  background-position: -789px -97px;
+  width: 17px;
+  height: 49px; }
+
+.yellowcallbutton {
+  background-image: url(images/sprite.png);
+  background-position: -456px -243px;
+  width: 247px;
+  height: 68px; }
+
+/*# sourceMappingURL=newstyle.css.map */
