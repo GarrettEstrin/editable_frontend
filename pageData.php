@@ -4,11 +4,16 @@
   $n = $_GET['n'];
   $f = $_GET['f'];
 
-  // echo "Message recieved";
-
   global $redis;
   $redis = new Redis();
-  $redis->connect('localhost', 6379);
-  $redis->select(0);
-  echo $redis.get('test');
+  $redis->connect('sqlstage01', 6379);
+  $redis->select(13);
+
+
+  if($f == 'set'){
+    $redis->hset($ns, $n, $v);
+    $data = $redis->hget($ns, $n);
+    echo $data;
+  }
+  
 ?>

@@ -1,4 +1,10 @@
-
+<?php 
+  global $redis;
+  $redis = new Redis();
+  $redis->connect('sqlstage01', 6379);
+  $redis->select(13);
+  $page = $redis->hgetall('offer_sprint_com:pages:iphone');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if lt IE 7]><html class="ie6" lang="en-GB" xmlns="https://www.w3.org/1999/xhtml"><![endif]-->
 <!--[if IE 7]><html class="ie7" lang="en-GB" xmlns="https://www.w3.org/1999/xhtml"><![endif]-->
@@ -78,7 +84,7 @@ function setNewCookie(cname, cvalue, exdays) {
 							</div>
 						</a>
 						<div class="yellowcallbutton">
-							<span class="call bolder jsEdit" data-point="phone-text">Call to Order Today</span>
+							<span class="call bolder jsEdit" data-point="phone-text"><?php echo $page['phone-text']; ?></span>
 							<div class="blackphone left"></div>
 							<div class="phonenum left bolder">
 								<a href="tel:855-589-5865" placeholder="855-589-5865" ringpoolid="3097" class="anumber dp_phone_container_open cfnumber"><span class="bolder phonenumber">855-589-5865</span></a>	
@@ -117,7 +123,7 @@ function setNewCookie(cname, cvalue, exdays) {
 
 					<div class="writing left">
 						<div class="blackbarwriting bolder">
-							<span>Switch to Sprint and get</span>
+							<span class="jsEdit"data-point="hero-title"><?php echo $page['hero-title']; ?></span>
 							<span class="unl">Unlimited for $20/mo per line</span>
 							<span>when you add 5 lines.</span>
 							<span class="skinny">That’s 5 lines of Unlimited for $100/mo.!</span>
@@ -136,7 +142,7 @@ function setNewCookie(cname, cvalue, exdays) {
 
 							<div class="orangeoutline">
 								<div class="innercontent">
-									<span class="hereshow bolder">Here's how it works!</span>
+									<span class="hereshow bolder jsEdit" data-point="list-title"><?php echo $page['list-title']; ?></span>
 									<ol class="blacknumbers">
 										<li>Your first line is just $60/mo.</li>
 										<li>Need a second line? It’s just another $40/mo.</li>
@@ -172,7 +178,7 @@ function setNewCookie(cname, cvalue, exdays) {
 						<!-- position absolute right stuff ends -->
 					</div>
 					<div class="bottomlegal cf">
-						<span class="legaltext">Limited time offer.  Savings until 1/31/19; then $60/mo. for line 1, $40/mo. for line 2 and $30/mo./line for lines 3-5. With AutoPay discount applied w/in 2 inv. Includes unlimited talk, text and data. Streams video at up to HD 1080p, music at up to 1.5mbps, gaming at up to 8mbps. Data deprioritization during congestion. MHS, P2P and VPN reduced to 2G speeds after 10GB/mo. Compared to similar unlimited plans from national carriers.  Carrier features differ. Other monthly charges apply.**</span>
+						<span class="legaltext jsEdit" data-point="above-fold-disc"><?php echo $page['above-fold-disc']; ?></span>
 					</div>
 				</div>
 			</div>
