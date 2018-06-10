@@ -4,6 +4,7 @@
   $redis->connect('sqlstage01', 6379);
   $redis->select(13);
   $page = $redis->hgetall('offer_sprint_com:pages:iphone');
+  var_dump($page);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if lt IE 7]><html class="ie6" lang="en-GB" xmlns="https://www.w3.org/1999/xhtml"><![endif]-->
@@ -133,7 +134,7 @@ function setNewCookie(cname, cvalue, exdays) {
 						
 						<div class="belowbar">
 							<div class="callorclick bolder">
-								<span>Call & Get This <br>Limited-Time Offer</span>
+								<span class="jsEdit" data-point="middle-title">Call & Get This <br>Limited-Time Offer</span>
 							</div>
 
 							<div class="blackshape">
@@ -159,7 +160,7 @@ function setNewCookie(cname, cvalue, exdays) {
 
 						<div class="desktoponly">					
 							<div class="positionpurpleholder">
-																	<div class="purplephonebar bolder">
+																	<div class="purplephonebar bolder"  style="display: none;">
 										<a href="tel:855-589-5865" placeholder="855-589-5865" ringpoolid="3097" class="anumber dp_phone_container_open cfnumber"><span class="bolder phonenumber">855-589-5865</span></a>									</div>
 									<a href="/go-to.php?a=100016&c=103281&s1=33443&s3=12638e6bb84de2d8e7133a46c8c4d168" ringpoolid="3097" placeholder="12638e6bb84de2d8e7133a46c8c4d168" target="_blank">
 										<span class="orshoponline">Or Shop Online</span>
@@ -320,7 +321,7 @@ function setNewCookie(cname, cvalue, exdays) {
     margin: 5px auto;
   }
 </style>
-<script src="edit.js"></script>
+<?php if($_GET['editable'] == 'true'){include './edit.php';} ?>
 </body>
 
 </html>
